@@ -20,11 +20,9 @@ def add_cover(content_object):
 
         # If a matching file is found, return its path
         if matching_files:
-            cover = matching_files[0]
+            # Write the path to the cover file to the object metadata
+            content_object.cover = '/' + matching_files[0]
             break
-
-    # Write the path to the cover file to the object metadata
-    content_object.cover = '/' + cover
 
 
 def register():
